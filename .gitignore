@@ -1,3 +1,5 @@
+pyvenv.cfg
+
 .DS_STORE
 src/ecommerce/aws/conf.py
 src/ecommerce/aws/ignore.py

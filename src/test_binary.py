@@ -1,36 +1,35 @@
 import pytest
 from binary.cbinary import CBinary
 
-#CLASS TESTMETHOD(OBJECT):
-class TestMethod(object):
-    def test_one(self):
-        x = "this"
-        assert 'h' in x
+# #CLASS TESTMETHOD(OBJECT):
+# class TestMethod(object):
+#     def test_one(self):
+#         x = "this"
+#         assert 'h' in x
 
-    def test_two(self):
-        x = "hello"
-        assert hasattr(x, 'check')
+#     def test_two(self):
+#         x = "hello"
+#         assert hasattr(x, 'check')
 
-# def test_path():
-#     import sys
-#     for p in sys.path:
-#         print(p)
+    # def test_path():
+    #     import sys
+    #     for p in sys.path:
+    #         print(p)
 
-# def test_mytest():
-#     with pytest.raises(SystemExit):
-#         f()
+    # def test_mytest():
+    #     with pytest.raises(SystemExit):
+    #         f()
 
-# def test_zero_division():
-#     with pytest.raises(ZeroDivisionError):
-#         1 / 0
+    # def test_zero_division():
+    #     with pytest.raises(ZeroDivisionError):
+    #         1 / 0
 
-# def func(x):
-#     return x + 1
+    # def func(x):
+    #     return x + 1
 
-# def test_answer():
-#     assert func(3) == 5
+    # def test_answer():
+    #     assert func(3) == 5
 
-'''
 def test_binary_init_int():
     binary = CBinary(6)
     assert int(binary) == 6
@@ -85,7 +84,6 @@ def test_binary_init_strseq():
     assert int(binary) == 6
 
 
-<<<<<<< HEAD:src/test_binary.py
 # Conversions
 
 def test_binary_eq():
@@ -101,15 +99,6 @@ def test_binary_int():
 def test_binary_bin():
     binary = CBinary(6)
     assert bin(binary) == '0b110'
-=======
-'''
-'''
-   
-    # Conversions
-
-    def test_binary_eq():
-        assert Binary(4) == Binary(4)
->>>>>>> 3e12c2e9b6ba830225cc18539752fd01429aa9b3:src/binary/tests/test_binary.py
 
 def test_binary_hex():
     binary = CBinary(6)
@@ -117,14 +106,6 @@ def test_binary_hex():
     assert hex(binary) == '0x6'
 
 
-<<<<<<< HEAD:src/test_binary.py
 def test_binary_str():
     binary = CBinary(6)
     assert str(binary) == '110'
-=======
-    '''
-
-
-# if __name__ == '__main__':
-#     test_where_AM_I()
->>>>>>> 3e12c2e9b6ba830225cc18539752fd01429aa9b3:src/binary/tests/test_binary.py

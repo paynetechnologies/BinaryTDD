@@ -1,9 +1,5 @@
 import pytest
-<<<<<<< HEAD:src/test_binary.py
 from binary.cbinary import CBinary
-=======
-from src.binary.binary import Binary
->>>>>>> 3e12c2e9b6ba830225cc18539752fd01429aa9b3:src/binary/tests/test_binary.py
 
 #CLASS TESTMETHOD(OBJECT):
 class TestMethod(object):

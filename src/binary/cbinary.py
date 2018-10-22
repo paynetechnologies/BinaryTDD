@@ -2,6 +2,7 @@ from collections.abc import Sequence
 
 class CBinary:
     def __init__(self, value=0):
+        print('Binary')
         if isinstance(value, Sequence):
             print(f'isinstance {value}')
             if len(value) > 2:
@@ -11,7 +12,7 @@ class CBinary:
                     self._value = int(value, base=16)
                 else:
                     self._value = int(''.join([str(i) for i in value]), base=2)
-                    print (f'Binary : {self._value}')
+            print (f'Binary : {self._value}')
         else:
             try:
                 self._value = int(value)

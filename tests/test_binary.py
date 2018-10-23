@@ -1,43 +1,64 @@
 import pytest
-from binary.cbinary import CBinary
+from src.binary.cbinary import CBinary
 
-# #CLASS TESTMETHOD(OBJECT):
-# class TestMethod(object):
-#     def test_one(self):
-#         x = "this"
-#         assert 'h' in x
+########################################
+def func(x):
+    return x + 1
 
-#     def test_two(self):
-#         x = "hello"
-#         assert hasattr(x, 'check')
+def test_answer():
+    assert func(4) == 5
+########################################
+
+########################################
+def f():
+    raise SystemExit(1)
+
+def test_mytest():
+    with pytest.raises(SystemExit):
+        f()
+########################################
+
+########################################
+class TestMethod(object):
+    def test_one(self):
+        x = "this"
+        assert 'h' in x
+    
+    def test_two(self):
+        x = "hello"
+        assert hasattr(x, 'check')
+########################################
+
+########################################
+# content of test_tmpdir.py
+def test_needsfiles(tmpdir):
+    print (tmpdir)
+    assert 0
+########################################
 
     # def test_path():
     #     import sys
     #     for p in sys.path:
     #         print(p)
 
-    # def test_mytest():
-    #     with pytest.raises(SystemExit):
-    #         f()
 
     # def test_zero_division():
     #     with pytest.raises(ZeroDivisionError):
     #         1 / 0
 
-    # def func(x):
-    #     return x + 1
+########################################
 
-    # def test_answer():
-    #     assert func(3) == 5
-
+'''
+@pytest.mark.skip(reason="testing the skip function")
 def test_binary_init_int():
     binary = CBinary(6)
     assert int(binary) == 6
+'''
 
 def test_binary_int():
-    binary = Binary(6)
+    binary = CBinary(6)
     assert int(binary) == 6    
-
+'''
 def test_binary_init_negative():
     with pytest.raises(ValueError):
         binary = CBinary(-4)
@@ -49,7 +70,7 @@ def test_binary_init_bitstr():
     assert int(binary) == 6
 
 def test_binary_str():
-    binary = Binary(6)
+    binary = CBinary(6)
     assert str(binary) == '110'
 
 
@@ -58,7 +79,7 @@ def test_binary_init_binstr():
     assert int(binary) == 6
 
 def test_binary_bin():
-    binary = Binary(6)
+    binary = CBinary(6)
     assert bin(binary) == '0b110'
 
 
@@ -71,7 +92,7 @@ def test_binary_init_hex():
     assert int(binary) == 6
 
 def test_binary_hex():
-    binary = Binary(6)
+    binary = CBinary(6)
     assert hex(binary) == '0x6'
 
 
@@ -109,3 +130,4 @@ def test_binary_hex():
 def test_binary_str():
     binary = CBinary(6)
     assert str(binary) == '110'
+'''
